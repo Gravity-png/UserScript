@@ -810,6 +810,19 @@
 			"bF": "return fun.src_bF(pageE)"
 		}
 	},
+	"淘股吧 - 帖子内 - 只看楼主": {
+		"host": "www.tgb.cn",
+		"url": "/^\\/topic\\/lookUserTopic/",
+		"thread": true,
+		"pager": {
+			"nextL": "js; let next = fun.getXpath('//div[contains(@class,\"t_page01\")]/a[contains(text(),\"下一页\")]');if (next) {next = next.getAttribute('onclick').replace('gotoPageLookTopic(','').replace(')','').split(',');return fun.getNextUP('pageNo=',/pageNo=\\d+/,location.pathname,'2',next[1])}; return '';",
+			"pageE": ".comment-data",
+			"replaceE": ".t_page"
+		},
+		"function": {
+			"bF": "return fun.src_bF(pageE)"
+		}
+	},
 	"芥子空间论坛": {
 		"host": "bbs.lieyou888.com",
 		"url": "/^\\/forum/",
@@ -3832,6 +3845,19 @@
 			"nextL": "//div[@class='prenext']/span/a[text()='下一页' or text()='下一章']|//div[@class='page']//a[text()='下一页']",
 			"pageE": ".con>p,.item",
 			"replaceE": ".prenext,.page"
+		}
+	},
+	"飘天文学": {
+		"host": "www.piaotia.com",
+		"url": "/^\\/html\\/\\d+\\/\\d+\\/\\d+\\.html",
+		"style": "#content>*:not(br):not(:nth-child(1))",
+		"pager": {
+			"type": 6,
+			"nextL": "(//a[contains(text(), '下一章')])[last()]",
+			"pageE": "#content",
+			"insertP": ["#content",6],
+			"replaceE": ".bottomlink",
+			"loadTime": 500
 		}
 	},
 	"皇帝之家": {
