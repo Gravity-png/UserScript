@@ -1204,7 +1204,7 @@
 		}
 	},
 	"nodeseek": {
-		"host": "www.nodeseek.com",
+		"host": ["www.nodeseek.com","www.deepflood.com"],
 		"url": "return fun.isPager()",
 		"pager": {
 			"nextL": "a.pager-next",
@@ -6693,6 +6693,16 @@
 			"loadTime": 500
 		}
 	},
+	"xxxclub": {
+		"host": "xxxclub.to",
+		"url": "return fun.isPager()",
+		"blank": 3,
+		"pager": {
+			"nextL": ".browsepagination>a:not(.page-link)",
+			"pageE": ".browsetableinside>ul>li:not(:first-child)",
+			"replaceE": ".browsepagination"
+		}
+	},
 	"Orzqwq": {
 		"host": "orzqwq.com",
 		"url": "if(fun.indexOF(/\\/p\\/\\d\\/$/)){let t = setInterval(()=>{if(typeof chapter_preloaded_images !== 'undefined'){let _img=''; for (let i=0;i<=chapter_preloaded_images.length;i++){_img += `<img src=\"${chapter_preloaded_images[i]}\">`;}; document.querySelector('.reading-content').innerHTML = _img;clearInterval(t);}},500); return true;}",
@@ -7042,6 +7052,23 @@
 		},
 		"function": {
 			"bF": "return fun.src_bF(pageE)"
+		}
+	},
+	"chottie": {
+		"host": "chottie.com",
+		"url": "if (fun.indexOF(/^\\/blog\\/archives/)){fun.insStyle('div[pagetotal]>div>div {display: block !important;} a>.v-image {width: auto !important;}');setTimeout(()=>{fun.getCSS('.v-btn-toggle>button:last-of-type').click();},1000)}"
+	},
+	"XiuRenBox": {
+		"host": "www.xiurenbox.com",
+		"url": "return fun.isPager()",
+		"style": ".page-click-zone",
+		"pager": {
+			"nextL": ".next",
+			"pageE": ".wp-block-image>img",
+			"replaceE": ".simple-page-nav"
+		},
+		"function": {
+			"bF": "return fun.src_bF(pageE, [0,'img[data-lazy-src]','data-lazy-src'])"
 		}
 	},
 	"MrCong": {
