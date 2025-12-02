@@ -5543,6 +5543,17 @@
 			"replaceE": ".pg_pointer"
 		}
 	},
+	"哲风壁纸": {
+		"host": "haowallpaper.com",
+		"url": "/^\\/(homeView|mobileView)($|\\?)/",
+		"blank": 3,
+		"pager": {
+			"type": 6,
+			"nextL": "js; return fun.getNextEP('.page-content>.current+.isDefault','page=',/page=\\d+/)",
+			"pageE": "#main-content .card",
+			"replaceE": ".page-main"
+		}
+	},
 	"Anime Pictures": {
 		"host": "anime-pictures.net",
 		"url": "return (fun.indexOF('/pictures/') && !fun.indexOF('/view_post/'))",
@@ -5888,7 +5899,7 @@
 		}
 	},
 	"xHamster": {
-		"host": ["/^[a-z]{2}\\.xhamster\\.com$/","/^[a-z]{2}\\..*(xh).*\\.[a-z]{2,}$/"],
+		"host": ["xhamster.com","/^[a-z]{2}\\.xhamster\\.com$/","/^[a-z]{2}\\..*(xh).*\\.[a-z]{2,}$/"],
 		"url": "return ((fun.isTitle('xHamster') || fun.getCSS('meta[name=application-name][content=xHamster]')) && !fun.indexOF('/videos/') && !fun.indexOF('/photos/gallery'))",
 		"blank": 3,
 		"pager": {
