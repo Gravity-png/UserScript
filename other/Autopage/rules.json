@@ -2810,7 +2810,7 @@
 		}
 	},
 	"Kickass Torrents": {
-		"host": ["kickasss.to","katcr.to"],
+		"host": ["kickasss.to","katcr.to","kickasstorrent.cr"],
 		"url": "return (fun.lp() != '/' && !fun.indexOF('.html') && !fun.indexOF('/popular'))",
 		"blank": 3,
 		"pager": {
@@ -2827,6 +2827,16 @@
 			"nextL": "li.page-item.active+li.page-item>a",
 			"pageE": ".tgxtable>div:not(.header)",
 			"replaceE": ".pagination"
+		}
+	},
+	"TorrentDownloads": {
+		"host": "www.torrentdownloads.pro",
+		"url": "return fun.isPager('r')",
+		"blank": 3,
+		"pager": {
+			"nextL": "//div[@class='pagination_box']//a[text()='>>']",
+			"pageE": ".inner_container>.grey_bar3",
+			"replaceE": ".pagination_box"
 		}
 	},
 	"LimeTorrents": {
@@ -2931,8 +2941,9 @@
 	"SubHD - 论坛": {
 		"host": ["subhd.tv","subhdtw.com","subhd.la","subhd.cc","subhd.me"],
 		"url": "/^\\/forum\\/(forum|ask)/",
+		"blank": 3,
 		"pager": {
-			"nextL": "//a[@class='page-link'][text()='下一页']",
+			"nextL": ".page-item.active+li>a",
 			"pageE": ".bg-white.shadow-sm.rounded-3>div",
 			"replaceE": "nav.clearfix"
 		}
@@ -2940,8 +2951,9 @@
 	"SubHD": {
 		"host": ["subhd.tv","subhdtw.com","subhd.la","subhd.cc","subhd.me"],
 		"url": "return fun.isPager('r')",
+		"blank": 3,
 		"pager": {
-			"nextL": "//a[@class='page-link'][text()='下一页']",
+			"nextL": ".page-item.active+li>a",
 			"pageE": ".bg-white.shadow-sm.rounded-3",
 			"insertP": ["nav.clearfix",1],
 			"replaceE": "nav.clearfix"
@@ -5984,6 +5996,15 @@
 			"replaceE": ".pages"
 		}
 	},
+	"M系镜像": {
+		"host": "mirror.chromaso.net",
+		"url": "if(fun.indexOF(/^\\/thread\\/.+/)){rule.thread=true;rule.pager.pageE='.container>.mm-post';return true;}else if(fun.indexOF(/^\\/(forum|search)\\/.+/)){rule.blank=3;return true;}",
+		"pager": {
+			"nextL": ".pagination>.active+li>a",
+			"pageE": "#thread-table-main>tbody>tr",
+			"replaceE": ".pagination"
+		}
+	},
 	"肉视频": {
 		"host": ["rou.video","rouva2.xyz"],
 		"url": "/^\\/(t\\/|(v|search)($|\\?))/",
@@ -6896,7 +6917,7 @@
 		"style": ".quickGuide,.outer-banner,.item[class*=exoclick],.item[class=item],.photos>div,.media,.static-container-4,.static-container-5,.recommendation_widget",
 		"pager": {
 			"type": 3,
-			"nextL": "a.pager-next",
+			"nextL": "a.next",
 			"pageE": ".videos>div.item:not([class*=exoclick]):not([class=item]), .videos>.video, .list>div.item:not([class*=exoclick]):not([class=item]), .photos>a, .fiction-body>.content>p, .fiction-body>.content>.chapters, .lists>a, .comic>div:not([class])",
 			"replaceE": ".pager,.prevNext",
 			"scrollE": ".pager+div+.pager,.prevNext",
@@ -7020,6 +7041,25 @@
 			"nextL": "js;const next=fun.getCSS('.pageselect>[selected]+option');if(next){return location.href.replace(/\\d+/,next.value);}",
 			"pageE": "#picarea",
 			"replaceE": ".newpagewrap"
+		}
+	},
+	"巴卡漫画": {
+		"host": ["bakamh.com","bakamh.ru","/^baka\\d\\.[a-z]+$/"],
+		"url": "/^\\/manga\\/.+\\/c-/",
+		"pager": {
+			"nextL": ".nav-next>a",
+			"pageE": ".reading-content>.page-break",
+			"replaceE": ".select-pagination,.select-view"
+		}
+	},
+	"巴卡漫画 - 列表页": {
+		"host": ["bakamh.com","bakamh.ru","/^baka\\d\\.[a-z]+$/"],
+		"url": "return fun.isPager()",
+		"blank": 3,
+		"pager": {
+			"nextL": "a.nextpostslink",
+			"pageE": "#loop-content>.page-listing-item",
+			"replaceE": ".wp-pagenavi"
 		}
 	},
 	"鸟鸟韩漫": {
