@@ -2730,7 +2730,7 @@
 		}
 	},
 	"YTS": {
-		"host": ["yts.lt","yts.gg","yts.am","yts.ag"],
+		"host": ["yts.bz","yts.lt","yts.gg","yts.am","yts.ag"],
 		"url": "/^\\/browse-movies/",
 		"blank": 3,
 		"pager": {
@@ -4128,6 +4128,17 @@
 			"nextL": "//div[@class='pager']/a[contains(text(),'下一页')]",
 			"pageE": ".article-content>p:not([style]):not(:last-of-type)",
 			"replaceE": ".pager"
+		}
+	},
+	"八叉书库": {
+		"host": "www.8xsk.xyz",
+		"url": "/^\\/novel\\d+\\/chapter/",
+		"pager": {
+			"type": 6,
+			"nextL": "#next_chap",
+			"pageE": "#chapter-content",
+			"replaceE": ".chapter-nav",
+			"loadTime": 1000
 		}
 	},
 	"蓝鲨": {
