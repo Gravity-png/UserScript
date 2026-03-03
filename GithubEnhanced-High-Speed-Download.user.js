@@ -3,7 +3,7 @@
 // @name:zh-CN   Github 增强 - 高速下载
 // @name:zh-TW   Github 增強 - 高速下載
 // @name:ru      Улучшение GitHub – быстрое скачивание
-// @version      2.6.34
+// @version      2.6.37
 // @author       X.I.U
 // @description  High-speed download of Git Clone/SSH, Release, Raw, Code(ZIP) and other files (Based on public welfare), project list file quick download (☁)
 // @description:zh-CN  高速下载 Git Clone/SSH、Release、Raw、Code(ZIP) 等文件 (公益加速)、项目列表单文件快捷下载 (☁)
@@ -87,7 +87,7 @@
         ['https://down.npee.cn/?https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [npee社区] 提供'],
         ['https://raw.ihtw.moe/github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [raw.ihtw.moe] 提供'],
         ['https://xget.xi-xu.me/gh', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [github.com/xixu-me/Xget] 提供'],
-        ['https://dgithub.xyz', '美国', '[美国 西雅图] - 该公益加速源由 [dgithub.xyz] 提供'],
+        //['https://dgithub.xyz', '美国', '[美国 西雅图] - 该公益加速源由 [dgithub.xyz] 提供'], // 证书挂了
         //['https://gh-proxy.ygxz.in/https://github.com', '美国', '[美国 洛杉矶] - 该公益加速源由 [@一个小站 www.ygxz.in] 提供'], // 被蔷
         ['https://gh.nxnow.top/https://github.com', '美国', '[美国 洛杉矶] - 该公益加速源由 [gh.nxnow.top] 提供'],
         ['https://gh.zwy.one/https://github.com', '美国', '[美国 洛杉矶] - 该公益加速源由 [gh.zwy.one] 提供'],
@@ -101,7 +101,7 @@
         //['https://kkgithub.com', '其他', '[中国香港、日本、韩国、新加坡等] - 该公益加速源由 [help.kkgithub.com] 提供&#10;&#10;提示：希望大家尽量多使用美国节点（每次随机 负载均衡），&#10;避免流量都集中到亚洲公益节点，减少成本压力，公益才能更持久~'], // 404
     ], clone_url = [
         ['https://gitclone.com', '国内', '[中国 国内] - 该公益加速源由 [GitClone] 提供&#10;&#10; - 缓存：有&#10; - 首次比较慢，缓存后较快'],
-        ['https://kkgithub.com', '香港', '[中国香港、日本、新加坡等] - 该公益加速源由 [help.kkgithub.com] 提供'],
+        //['https://kkgithub.com', '香港', '[中国香港、日本、新加坡等] - 该公益加速源由 [help.kkgithub.com] 提供'], // 超时
         //['https://gitdl.cn/https://github.com', '香港', '[中国香港] - 该公益加速源由 [gitdl] 提供'], // 输出文件错误
         //['https://gitproxy.click/https://github.com', '香港', '[中国 香港] - 该公益加速源由 [gitproxy.click] 提供'],
         //['https://cdn.moran233.xyz/https://github.com', '香港', '[中国 香港] - 该公益加速源由 [cdn.moran233.xyz] 提供'],
@@ -114,7 +114,6 @@
         //['https://ghproxy.net/https://github.com', '日本', '[日本 大阪] - 该公益加速源由 [ghproxy.net] 提供'], // 挂了
         //['https://proxy.yaoyaoling.net/https://github.com', '日本', '[日本 东京] - 该公益加速源由 [proxy.yaoyaoling.net] 提供'],
         //['https://g.blfrp.cn/https://github.com', '日本', '[日本 东京] - 该公益加速源由 [g.blfrp.cn] 提供'],
-        //['https://github.3x25.com/https://github.com', '新加坡', '[新加坡] - 该公益加速源由 [github.3x25.com] 提供'],
         //['https://raw.bgithub.xyz', '荷兰', '[荷兰] - 该公益加速源由 [bgithub.xyz] 提供&#10;&#10; - 缓存：有'],
         //['https://ghproxy.1888866.xyz/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [WJQSERVER-STUDIO/ghproxy] 提供'],
         //['https://github.moeyy.xyz/https://github.com', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [moeyy.cn] 提供'], // 墙了
@@ -142,12 +141,11 @@
         //['git@git.zhlh6.cn:', '美国', '[美国 洛杉矶]'] // 挂了
     ], raw_url = [
         ['https://raw.githubusercontent.com', 'Github 原生', '[日本 东京]&#10;&#10; - 缓存：无（或很短）'],
-        ['https://raw.kkgithub.com', '香港 1', '[中国香港、日本、新加坡等] - 该公益加速源由 [help.kkgithub.com] 提供&#10;&#10; - 缓存：有'],
+        //['https://raw.kkgithub.com', '香港 1', '[中国香港、日本、新加坡等] - 该公益加速源由 [help.kkgithub.com] 提供&#10;&#10; - 缓存：有'], // 超时
         //['https://jsd.proxy.aks.moe/gh', '香港 2', '[中国 香港] - 该公益加速源由 [cdn.akass.cn] 提供'], // 证书错误
-        ['https://wget.la/https://raw.githubusercontent.com', '香港 2', '[中国香港、中国台湾、日本、美国等]（CDN 不固定） - 该公益加速源由 [ucdn.me] 提供&#10;&#10; - 缓存：无（或很短）'],
-        ['https://hk.gh-proxy.org/https://raw.githubusercontent.com', '香港 3', '[中国香港] - 该公益加速源由 [gh-proxy.com] 提供&#10;&#10; - 缓存：有（官方注明 2 小时）'],
-        ['https://hub.glowp.xyz/https://raw.githubusercontent.com', '香港 4', '[中国香港] - 该公益加速源由 [hub.glowp.xyz] 提供&#10;&#10; - 缓存：有'],
-        //['https://cdn.wget.la/gh', '香港 2', '[中国香港、中国台湾、日本、美国等]（CDN 不固定） - 该公益加速源由 [ucdn.me] 提供&#10;&#10; - 缓存：无（或很短）'],
+        ['https://wget.la/https://raw.githubusercontent.com', '香港 1', '[中国香港、中国台湾、日本、美国等]（CDN 不固定） - 该公益加速源由 [ucdn.me] 提供&#10;&#10; - 缓存：无（或很短）'],
+        ['https://hk.gh-proxy.org/https://raw.githubusercontent.com', '香港 2', '[中国香港] - 该公益加速源由 [gh-proxy.com] 提供&#10;&#10; - 缓存：有（官方注明 2 小时）'],
+        ['https://hub.glowp.xyz/https://raw.githubusercontent.com', '香港 3', '[中国香港] - 该公益加速源由 [hub.glowp.xyz] 提供&#10;&#10; - 缓存：有'],
         //['https://gitproxy.click/https://raw.githubusercontent.com', '香港', '[中国 香港] - 该公益加速源由 [gitproxy.click] 提供'], // 输出错误
         //['https://cdn.moran233.xyz/https://raw.githubusercontent.com', '香港', '[中国 香港] - 该公益加速源由 [cdn.moran233.xyz] 提供'], // 404
         //['https://gitdl.cn/https://raw.githubusercontent.com', '香港 3', '[中国香港] - 该公益加速源由 [gitdl] 提供&#10;&#10; - 缓存：有'], // 输出文件错误
@@ -159,7 +157,6 @@
         //['https://jsdelivr.pai233.top/gh', '日本 3', '[日本 东京]（Vercel Anycast） - 该公益加速源由 [blog.pai233.top] 提供&#10;&#10; - 缓存：有'], // This deployment is temporarily paused
         //['https://proxy.yaoyaoling.net/https://raw.githubusercontent.com', '日本', '[日本 东京] - 该公益加速源由 [proxy.yaoyaoling.net] 提供'], // 空白
         ['https://g.blfrp.cn/https://raw.githubusercontent.com', '日本 3', '[日本 东京] - 该公益加速源由 [g.blfrp.cn] 提供'],
-        ['https://github.3x25.com/https://raw.githubusercontent.com', '新加坡', '[新加坡] - 该公益加速源由 [github.3x25.com] 提供'],
         //['https://raw.bgithub.xyz', '荷兰', '[荷兰] - 该公益加速源由 [bgithub.xyz] 提供&#10;&#10; - 缓存：有'],
         //['https://gcore.jsdelivr.net/gh', '美国', '[美国 Cloudflare CDN] - 该公益加速源由 [JSDelivr CDN] 提供&#10;&#10; - 缓存：有&#10; - 不支持大小超过 50 MB 的文件&#10; - 不支持版本号格式的分支名（如 v1.2.3）'], // 变成 美国 Cloudflare CDN 了
         //['https://jsdelivr.b-cdn.net/gh', '其他', '[中国香港、中国台湾、日本、新加坡等]（CDN 不固定） - 该公益加速源由 [@rttwyjz] 提供&#10;&#10; - 缓存：有'], // 疑似 SNI 阻断
@@ -267,10 +264,11 @@
                 for (const target of mutation.addedNodes) {
                     if (target.nodeType !== 1) return
                     if (target.tagName === 'DIV' && target.parentElement && target.parentElement.id === '__primerPortalRoot__') {
-                        addDownloadZIP(target);
                         addGitClone(target);
                         addGitCloneSSH(target);
-                    } else if (target.tagName === 'DIV' && target.className.indexOf('Box-sc-') != -1) {
+                        addDownloadZIP(target);
+                        //setTimeout(()=>{addDownloadZIP(target)}, 300);
+                    } else if (target.tagName === 'DIV' && target.className.indexOf('LocalTab-module__') != -1) {
                         if (target.querySelector('input[value^="https:"]')) {
                             addGitCloneClear('.XIU2-GCS'); addGitClone(target);
                         } else if (target.querySelector('input[value^="git@"]')) {
@@ -328,11 +326,14 @@
 
     // Download ZIP
     function addDownloadZIP(target) {
-        let html = target.querySelector('ul[class^=prc-ActionList-ActionList-]>li:last-child');if (!html) return
-        let href_script = document.querySelector('react-partial[partial-name=repos-overview]>script[data-target="react-partial.embeddedData"]'),
-            href_slice = href_script.textContent.slice(href_script.textContent.indexOf('"zipballUrl":"')+14),
-            href = href_slice.slice(0, href_slice.indexOf('"')),
-            url = '', _html = '', new_download_url = get_New_download_url();
+        const html = target.querySelector('ul[class^=prc-ActionList-ActionList-]>li:last-child');if (!html) return
+        let href = html.querySelector('a[href^="/"][href$=".zip"]');if (!href || !href.getAttribute('href')) return
+        href = href.getAttribute('href');
+        //const href_script = document.querySelector('react-partial[partial-name=repos-overview]>script[data-target="react-partial.embeddedData"]');if (!href_script) return
+        //const href = JSON.parse(href_script.textContent).props.initialPayload.overview.codeButton.local.platformInfo.zipballUrl
+        /*let href_slice = href_script.textContent.slice(href_script.textContent.indexOf('"zipballUrl":"')+14),
+            href = href_slice.slice(0, href_slice.indexOf('"')),*/
+        let url = '', _html = '', new_download_url = get_New_download_url();
 
         // 克隆原 Download ZIP 元素，并定位 <a> <span> 标签
         let html_clone = html.cloneNode(true),
@@ -369,8 +370,8 @@
             html_parent = '<div style="margin-top: 4px;" class="XIU2-GC ' + html.parentElement.className + '">',
             url = '', _html = '', _gitClone = '';
         if (html.nextElementSibling) html.nextElementSibling.hidden = true; // 隐藏右侧复制按钮（考虑到能直接点击复制，就不再重复实现复制按钮事件了）
-        if (html.parentElement.nextElementSibling.tagName === 'SPAN'){
-            html.parentElement.nextElementSibling.textContent += ' (↑点击上面文字可复制)'
+        if (html.parentElement.nextElementSibling.tagName === 'P'){
+            html.parentElement.nextElementSibling.textContent += ' (↑点击文字自动复制)'
         }
         if (GM_getValue('menu_gitClone')) {_gitClone='git clone '; html.value = _gitClone + html.value; html.setAttribute('value', html.value);}
         // 克隆原 Git Clone 元素
@@ -400,8 +401,8 @@
             html_parent = '<div style="margin-top: 4px;" class="XIU2-GCS ' + html.parentElement.className + '">',
             url = '', _html = '', _gitClone = '';
         html.nextElementSibling.hidden = true; // 隐藏右侧复制按钮（考虑到能直接点击复制，就不再重复实现复制按钮事件了）
-        if (html.parentElement.nextElementSibling.tagName === 'SPAN'){
-            html.parentElement.nextElementSibling.textContent += ' (↑点击文字可复制)'
+        if (html.parentElement.nextElementSibling.tagName === 'P'){
+            html.parentElement.nextElementSibling.textContent += ' (↑点击自动复制)'
         }
         if (GM_getValue('menu_gitClone')) {_gitClone='git clone '; html.value = _gitClone + html.value; html.setAttribute('value', html.value);}
         // 克隆原 Git Clone SSH 元素
