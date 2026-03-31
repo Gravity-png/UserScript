@@ -943,6 +943,15 @@
 			"replaceE": ".pagination"
 		}
 	},
+	"TFW2005": {
+		"host": "www.tfw2005.com",
+		"url": "if(fun.indexOF(/^\\/boards\\/forums\\//)){rule.blank=3;}else if(fun.indexOF(/^\\/boards\\/threads\\//)){rule.pager.pageE='ol#messageList>li';rule.thread=true;}else{return false;};return true",
+		"pager": {
+			"nextL": ".PageNav .currentPage+a[href], .PageNav .currentPage+a+span>span>a:first-child",
+			"pageE": "ol.discussionListItems>li",
+			"replaceE": ".PageNav"
+		}
+	},
 	"CPC中文印刷社区": {
 		"host": "www.cnprint.org",
 		"url": "if(fun.indexOF(/^\\/bbs\\/forumdisplay\\.php/)){rule.blank=3;return true;}else if(fun.indexOF(/^\\/bbs\\/showthread\\.php/)){return true;}",
@@ -4016,11 +4025,11 @@
 	},
 	"爱下电子书": {
 		"host": "ixdzs8.com",
-		"url": "/^\\/read\\/.+\\.html$/",
+		"url": "return (fun.indexOF(/^\\/read\\/.+\\.html$/) || fun.isPager())",
 		"pager": {
-			"nextL": ".chapter-next",
-			"pageE": ".page-content>section",
-			"replaceE": "chapter-act"
+			"nextL": ".chapter-next, .num.current+a",
+			"pageE": ".page-content>section, .u-list>li",
+			"replaceE": ".chapter-act, .page"
 		}
 	},
 	"飘天文学": {
@@ -5429,9 +5438,9 @@
 		"url": "return (fun.indexOF(/\\/(scripts|feedback)$/) || fun.indexOF(/\\/scripts\\/(by-site|libraries|code-search)/) || (fun.indexOF('/discussions') && !fun.indexOF(/\\/\\d+/)))",
 		"blank": 3,
 		"pager": {
-			"nextL": "a.next_page",
+			"nextL": "a[aria-current=page]+a",
 			"pageE": "ol#browse-script-list>li,.script-discussion-list,.discussion-list>div",
-			"replaceE": ".pagination"
+			"replaceE": ".pagy"
 		}
 	},
 	"OpenUserJS": {
